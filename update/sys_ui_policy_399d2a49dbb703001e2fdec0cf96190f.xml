@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <conditions table="x_58872_needit_needit">u_what_needed=other^EQ<item endquery="false" field="u_what_needed" goto="false" newquery="false" operator="=" or="false" value="other"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </conditions>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>150</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>true</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+	jslog("The condition is false");
+	alert('The condition is false');
+	g_form.hideFieldMsg('u_other','true');
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+	jslog("The condition is true");
+	alert('The condition is true');
+	g_form.showFieldMsg('u_other','Briefly explain what u need.','info');
+}]]></script_true>
+        <set_values/>
+        <short_description>Need It Show or Hide a other field</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-01-20 03:21:39</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>399d2a49dbb703001e2fdec0cf96190f</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Need It Show or Hide a other field</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_ui_policy_399d2a49dbb703001e2fdec0cf96190f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-01-27 07:15:32</sys_updated_on>
+        <table>x_58872_needit_needit</table>
+        <ui_type>0</ui_type>
+        <view display_value="User" name="User">User</view>
+    </sys_ui_policy>
+</record_update>
